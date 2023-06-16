@@ -25,7 +25,7 @@ body {
     height: 777px;
     left: calc(50% - 1159px/2 + 0.5px);
     top: calc(50% - 777px/2 - 0.5px);
-    background-color: var(--gray-3);
+    background-color: var(--gray-2);
     display: grid;
     grid-template-rows: 33px 1fr 57px;
 }
@@ -34,6 +34,8 @@ body {
     color: #DFE1E6;
     text-align: center;
     padding-top: 7px;
+    border-bottom: var(--gray-3) 1px solid;
+
 }
 
 .dialog .footer {
@@ -43,11 +45,31 @@ body {
     position: relative;
     align-items: center;
     gap: 12px;
+    border-top: 1px;
+    border-top-color: var(--gray-2);
+    border-top: var(--gray-3) 1px solid;
+
 }
 
 
 .dialog .content {
     background-color: red;
+
+}
+
+.dialog .content .camera {
+    width: 167px;
+    height: 100%;
+    background-color: var(--gray-2);
+    flex-direction: column;
+    gap: 8px;
+    border-right: var(--gray-3) 1px solid;
+}
+
+.dialog .content .camera img {
+    margin-top: 24px;
+    width: auto;
+    height: 82px;
 }
 
 .dialog .footer .help {
@@ -76,6 +98,10 @@ body {
     border-radius: 8px;
     gap: 4px;
     padding: 12px 16px;
+}
+
+.dialog .footer .help .tooltip .content a:hover {
+    text-decoration: underline;
 }
 
 .dialog .footer .help:hover .tooltip {

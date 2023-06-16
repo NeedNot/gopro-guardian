@@ -13,16 +13,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/water.css">
     <link rel="stylesheet" href="css/universial.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <script>
+        function getImage(camera) {
+            var cameras = [
+                {
+                    alt: "hero11",
+                    path: "imgs/gopros/camera_selector_sultans.png"
+                },
+                {
+                    alt: "hero11mini",
+                    path: "imgs/gopros/camera_selector_pismo.png"
+                },
+                {
+                    alt: "max",
+                    path: "imgs/gopros/camera_selector_coconuts.png"
+                },
+                // Add more cameras here if needed
+            ];
+
+            var selectedCamera = cameras.find(function (cam) {
+                return cam.alt === camera;
+            });
+
+            if (selectedCamera) {
+                return selectedCamera.path;
+            }
+
+            // Return a default image path or handle the case when the camera is not found
+            return "imgs/gopros/camera_selector_sultans.png";
+        }
+        const cam = new URLSearchParams(window.location.search).get('camera');
+    </script>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="dialog">
         <div class="header"><span class="ui-default-semibold">Underwater Locator</span></div>
-        <div class="content">
-
+        <div class="content flex" style="align-items:flex-start">
+            <div class="camera flex">
+                <img src="imgs/gopros/camera_selector_sultans.png" onload="this.onload = null; this.src = getImage(cam);" alt="${cam}">
+                <div style="font-family: 'Inter', sans-serif;"><script>document.write(cam)</script></div>
+            </div>
         </div>
         <div class="footer">
             <div class="help">
@@ -38,7 +75,8 @@
                         <div class="ui-default-semibold">Gopro Guardian</div>
                         <div class="ui-default" style="color: var(--gray-10);">Is a tool for configuring Gopro Labs
                             scripts. Gopro Guardian is an unofficial open source project unaffiliated with Gopro.</div>
-                        <a class="ui-default flex" style="color: var(--link); padding: 1px 0;" href="https://github.com/gopro/labs">
+                        <a class="ui-default flex" style="color: var(--link); padding: 1px 0;"
+                            href="https://github.com/gopro/labs">
                             <span class="link-text">Gopro Labs documentation</span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +87,8 @@
                         </a>
 
                     </div>
-                    <svg style="margin-top: -1px; margin-left: 0; margin-right: auto" width="48" height="8" viewBox="0 0 48 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg style="margin-top: -1px; margin-left: 0; margin-right: auto" width="48" height="8"
+                        viewBox="0 0 48 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 8L16 0L32 1.39876e-06L24 8Z" fill="#393B40" />
                     </svg>
 
@@ -58,7 +97,7 @@
             <div class="button outline ui-default">
                 back
             </div>
-            <div class="button ui-default">
+            <div class="button gray ui-default">
                 share
             </div>
             <div class="button solid ui-default">

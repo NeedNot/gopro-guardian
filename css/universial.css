@@ -2,9 +2,13 @@
 :root {
     --gray-12: #DFE1E6;
     --gray-10: #B4B8BF;
-    --gray-3: #393B40;
+    --gray-7: #6F737A;
     --gray-5: #4E5157;
+    --gray-4: #43454A;
+    --gray-3: #393B40;
+    --gray-2: #2B2D30;
     --blue-6: #3574F0;
+    --blue-5: #366ACF;
     --link: #548af7;
 }
 
@@ -35,7 +39,7 @@ h1 {
     font-weight: 600;
     font-style: normal;
     font-size: 64px;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     vertical-align: baseline;
     color: var(--gray-12);
     text-align: center;
@@ -46,7 +50,7 @@ p {
 }
 
 .ui-default {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -54,7 +58,7 @@ p {
 }
 
 .ui-default-semibold {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
@@ -62,7 +66,7 @@ p {
 }
 
 .ui-h2 {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -70,7 +74,7 @@ p {
 }
 
 .ui-medium-semibold {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -84,12 +88,24 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-5);
+    cursor: pointer;
 }
 .button.outline {
     background-color: transparent;
-    box-shadow: inset 0px 0px 0px 1px #4E5157;
+    box-shadow: inset 0px 0px 0px 1px var(--gray-5);
+}
+.button.outline:hover {
+    box-shadow: inset 0px 0px 0px 1px var(--gray-7);
 }
 .button.solid {
     background-color: var(--blue-6);
+}
+.button.solid:hover {
+    background-color: var(--blue-5);
+}
+.button.gray {
+    background-color: var(--gray-5);
+}
+.button.gray:hover {
+    background-color: var(--gray-4);
 }
