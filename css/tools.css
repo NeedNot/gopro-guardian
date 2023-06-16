@@ -1,0 +1,62 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(30, 31, 34, 0.95), rgba(30, 31, 34, 0.95)), url(/imgs/ski.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2.5px);
+    z-index: -1;
+}
+
+body {
+    background-color: rgba(30, 31, 34, 0.95);
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.app {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 48px;
+    gap: 10px;
+
+    width: 238px;
+    height: 214px;
+
+    background: rgba(43, 45, 48, 0.5);
+    border: 1px solid #43454A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7.5px);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: scale 0.25s ease-in-out;
+}
+
+.app:hover {
+    scale: 1.1;
+}
+
+.app img {
+    width: 136px;
+    height: 136px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.credit {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    margin: 0;
+}

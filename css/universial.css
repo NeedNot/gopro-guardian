@@ -1,0 +1,95 @@
+/* colors */
+:root {
+    --gray-12: #DFE1E6;
+    --gray-10: #B4B8BF;
+    --gray-3: #393B40;
+    --gray-5: #4E5157;
+    --blue-6: #3574F0;
+    --link: #548af7;
+}
+
+/* margin */
+.m-auto {
+    margin: auto;
+}
+
+/* flex */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 64px;
+    font-family: 'Inter';
+    vertical-align: baseline;
+    color: var(--gray-12);
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+.ui-default {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.ui-default-semibold {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.ui-h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.ui-medium-semibold {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.button {
+    border-radius: 4px;
+    width: 72px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-5);
+}
+.button.outline {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 1px #4E5157;
+}
+.button.solid {
+    background-color: var(--blue-6);
+}
