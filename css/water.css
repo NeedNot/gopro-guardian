@@ -53,14 +53,12 @@ body {
 
 
 .dialog .content {
-    background-color: red;
-
+    background-color: var(--gray-2);
 }
 
 .dialog .content .camera {
     width: 167px;
     height: 100%;
-    background-color: var(--gray-2);
     flex-direction: column;
     gap: 8px;
     border-right: var(--gray-3) 1px solid;
@@ -70,6 +68,14 @@ body {
     margin-top: 24px;
     width: auto;
     height: 82px;
+}
+
+.dialog .content .settings {
+    border-right: var(--gray-3) 1px solid;
+    width: 571px;
+    height: 100%;
+    gap: 20px;
+    padding: 10px 20px;
 }
 
 .dialog .footer .help {

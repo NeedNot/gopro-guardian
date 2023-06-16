@@ -73,6 +73,14 @@ p {
     line-height: 20px;
 }
 
+.ui-medium {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 .ui-medium-semibold {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -90,22 +98,64 @@ p {
     align-items: center;
     cursor: pointer;
 }
+
 .button.outline {
     background-color: transparent;
     box-shadow: inset 0px 0px 0px 1px var(--gray-5);
 }
+
 .button.outline:hover {
     box-shadow: inset 0px 0px 0px 1px var(--gray-7);
 }
+
 .button.solid {
     background-color: var(--blue-6);
 }
+
 .button.solid:hover {
     background-color: var(--blue-5);
 }
+
 .button.gray {
     background-color: var(--gray-5);
 }
+
 .button.gray:hover {
     background-color: var(--gray-4);
+}
+
+.setting {
+    display: flex;
+}
+.setting .label {
+    margin-top: 12px;
+}
+.setting .input {
+    margin: 6px 0;
+}
+.setting .input .dropdown {
+    display: flex;
+    box-shadow: inset 0px 0px 0px 1px var(--gray-5);
+    width: min-content;
+    height: 28px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+.setting .input .dropdown input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 40px;
+    padding: 0;
+    padding-left: 9px;
+}
+.setting .input .dropdown div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+}
+.setting .input .hint {
+    color: var(--gray-7);
 }
