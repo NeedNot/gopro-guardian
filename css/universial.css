@@ -149,6 +149,9 @@ p {
     padding: 0;
     padding-left: 9px;
 }
+.setting .input .dropdown input:focus {
+    outline: none;
+}
 .setting .input .dropdown div {
     display: flex;
     justify-content: center;
